@@ -33,6 +33,11 @@ class LocationController extends GetxController {
     latitude.value = jsonData['latitude'] as String;
     longitude.value = jsonData['longitude'] as String;
     time.value = jsonData['time'] as String;
+
+    if(locationId.value.isEmpty){
+      Future.delayed(const Duration(seconds: 2));
+      getLastLocationFromDb();
+    }
   }
 
   Future<void> getCurrentLocation() async {

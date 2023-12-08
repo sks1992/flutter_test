@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_app_flutter/app_route.dart';
+import 'package:test_app_flutter/core/bindings/init_binidng.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       getPages: AppRoute.route,
       initialRoute: RouteName.locationScreen,
+      initialBinding: InitBinding(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
